@@ -9,6 +9,7 @@
     <%= comment.body %>
   </p>
 
+  <!-- delete comment using turbo -->
   <p>
     <%= link_to "Destroy Comment", [comment.article, comment], data: {
                   turbo_method: :delete,

@@ -21,6 +21,11 @@
     <strong>Comment:</strong>
     <%= comment.body %>
   </p>
+
+  <!-- delete comment using turbo -->
+  <%= link_to 'Delete Comment', [comment.article, comment], data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+
+
 <% end %>
 
 <h2>Add a comment:</h2>
@@ -37,5 +42,7 @@
     <%= form.submit %>
   </p>
 <% end %>
+
+
 
 
